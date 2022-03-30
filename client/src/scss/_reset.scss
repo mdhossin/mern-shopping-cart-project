@@ -1,0 +1,80 @@
+@use "./utils/" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+/* ====== global styles any section can i use ====== */
+
+.container-div {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  //min-width: 1024px
+  @include breakpoint-up("xlarge") {
+    margin: 1rem auto;
+  }
+  @include breakpoint-up("xxlarge") {
+    max-width: 1200px;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: outside none none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+a,
+button {
+  line-height: inherit;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  color: #000;
+}
+button {
+  border: none;
+  outline: none;
+}
+
+a,
+button,
+img,
+input,
+span {
+  transition: all 0.3s ease 0s;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
